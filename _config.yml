@@ -1,6 +1,6 @@
 # In _config.yml
-title: "STATS 305B: Models and Algorithms for Discrete Data"
-author: Scott Linderman
+title: "Journal Club"
+author: Leda Liang
 copyright: "2024"
 execute:
   execute_notebooks: force
