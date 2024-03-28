@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Breiman 1995 paper &#8212; Journal Club</title>
+    <title>Benjamini 1995 paper &#8212; Journal Club</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'breiman2001/README';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'benjamini1995/README';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Efron 1979 paper" href="../gelfand1990/README.html" />
-    <link rel="prev" title="Benjamini 1995 paper" href="../benjamini1995/README.html" />
+    <link rel="next" title="Breiman 1995 paper- only if needed" href="../breiman2001/README.html" />
+    <link rel="prev" title="Laird 1982 paper" href="../laird1982/README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,9 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Papers</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../laird1982/README.html">Laird 1982 paper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benjamini1995/README.html">Benjamini  1995  paper</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Breiman  1995 paper</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Benjamini  1995  paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../breiman2001/README.html">Breiman  1995 paper- only if needed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gelfand1990/README.html">Efron  1979 paper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../efron1979/README.html">Efron  1979 paper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dempster1977/README.html">Dempster  1979 paper</a></li>
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/breiman2001/README.md" target="_blank"
+      <li><a href="../_sources/benjamini1995/README.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,9 +283,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -297,25 +294,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Breiman  1995 paper</h1>
+    <h1>Benjamini  1995  paper</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Breiman  1995 paper</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -325,33 +308,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="breiman-1995-paper">
-<h1>Breiman  1995 paper<a class="headerlink" href="#breiman-1995-paper" title="Permalink to this heading">#</a></h1>
-<section id="two-cultures">
-<h2>Two cultures<a class="headerlink" href="#two-cultures" title="Permalink to this heading">#</a></h2>
-<p>Leo Breiman’s paper on the two cultures refers to two main approaches within the field of statistics:</p>
-<ol class="arabic simple">
-<li><p><strong>Data Modeling Culture</strong>: This approach comes from more classical statistics and is based on generating models from data that provide insight into the underlying processes that have generated the data. Here, the focus is on understanding the relationship between variables and the reasons behind this relationship. The models are typically grounded in theory and are interpretable, meaning one can understand the role and significance of each variable.</p></li>
-<li><p><strong>Algorithmic Modeling Culture</strong>: This culture is more aligned with machine learning approaches which focus on predictive accuracy. It treats the true data-generating process as unknown and complex, and it uses algorithms to find patterns that can predict future unseen data. The models may be treated as “black boxes” where interpretability is often sacrificed for performance.</p></li>
-</ol>
-</section>
-<section id="lessons-to-takeaway-from-this-paper">
-<h2>Lessons to takeaway from this paper<a class="headerlink" href="#lessons-to-takeaway-from-this-paper" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Embrace computational and algorithmic thinking</strong>: If you are tasked with learning from data generated by a complicated model, you should search for the model that gives the best solution – either algorithmic or data model.</p></li>
-<li><p><strong>Being open to handling complexity</strong>: Using restrictive models can prevent statisticians from working on exciting new problems.Real-world data is becoming increasingly messy and complex. Be prepared tod eal with large datasets and complex models that may not fit into neat theoretical frameworks.</p></li>
-<li><p><strong>Critical thinking</strong>: Incorrect data modeling assumptions can lead to questionable scientific discoveries. However, it is also important to critically assess the appropriateness of black box models.</p></li>
-<li><p><strong>Value both cultures</strong>: Most importantly, Breiman’s paper encourages the statistical community to recognize the value in both cultures and a well-rounded statistician appreciates the strengths and limitations of each approach.</p></li>
-</ul>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h1>
-<!-- <img src="./breiman2001/breiman2001.pdf> -->
-<!-- <iframe src="/breiman2001/breiman2001.pdf" width="700" height="500" allow="fullscreen"></iframe> -->
-<embed src="breiman2001/breiman2001.pdf" type="application/pdf" width="600" height="400">
-    If you're unable to view the document above, please download the PDF to view it: <a href="/breiman2001/breiman2001.pdf">Download PDF</a>.
-</embed>
+  <section class="tex2jax_ignore mathjax_ignore" id="benjamini-1995-paper">
+<h1>Benjamini  1995  paper<a class="headerlink" href="#benjamini-1995-paper" title="Permalink to this heading">#</a></h1>
+<p>The 2010 paper  is a retrospective</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -367,7 +326,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./breiman2001"
+            path: "./benjamini1995"
         },
         predefinedOutput: true
     }
@@ -386,20 +345,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../benjamini1995/README.html"
+       href="../laird1982/README.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Benjamini  1995  paper</p>
+        <p class="prev-next-title">Laird 1982 paper</p>
       </div>
     </a>
     <a class="right-next"
-       href="../gelfand1990/README.html"
+       href="../breiman2001/README.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Efron  1979 paper</p>
+        <p class="prev-next-title">Breiman  1995 paper- only if needed</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -412,26 +371,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Breiman  1995 paper</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
