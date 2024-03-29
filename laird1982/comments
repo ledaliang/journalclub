@@ -1,0 +1,12 @@
+**Dileka**:
+
+The overarching motivating example involving the Harvard Six Cities was an interesting way to exhibit the power of the methodology. It was also helpful to see the history of the approach beginning with the linear model, then explaining its issues along with how they were resolved by growth curves, eventually explaining its issues and how they were resolved by future models and so on. My only feedback would be to have gone a bit slower through some of the math and proofs via additional detail whilst hi-lighting the main clever ideas in them.
+
+**Leda**:
+
+I really appreciated your presentation on mixed effects models. It provides a degree of flexibility that is very attractive to many practicioners. It was very interesting to learn about the landscape of statistical modeling when this method was being developed.
+
+ I have a few suggestions for presenting this work to prospective undergrads:
+
+1. The growth curve model with $b_i \sim N(0,D)$ almost looks Bayesian. It may be worth commenting on this similarity and add brief explanation distinguishing the two methods. 
+2. Due to the simplicity and flexibility, mixed effects models can be a popular choice in practice. It would be helpful to have a brief tutorial or a list of existing packages/libraries that can be used to implement mixed effects models. It should also note some of the cautions when using mixed effects models such as overparameterization.

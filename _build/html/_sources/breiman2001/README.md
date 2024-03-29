@@ -20,22 +20,17 @@ Leo Breiman's paper on the two cultures refers to two main approaches within the
 
 * __Value both cultures__: Most importantly, Breiman's paper encourages the statistical community to recognize the value in both cultures and a well-rounded statistician appreciates the strengths and limitations of each approach.
 
-# Original Paper
+# Summary
 
-<iframe src="../_static/breiman2001/breiman2001.pdf" width="700" height="500" allow="fullscreen"></iframe>
-
-<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/breiman2001.pdf). -->
+<iframe src="../_static/breiman2001/Summary.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 
 # Presentation
 
-<iframe src="../_static/breiman2001/Presentation.pdf" width="700" height="500" allow="fullscreen"></iframe>
+<iframe src="../_static/breiman2001/Presentation.pdf" width="700" height="600" allow="fullscreen"></iframe>
 
-<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/Presentation.pdf). -->
+# 2001 Paper
 
-# Summary
+<iframe src="../_static/breiman2001/breiman2001.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 
-<iframe src="../_static/breiman2001/Summary.pdf" width="700" height="500" allow="fullscreen"></iframe>
-
-<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/Summary.pdf). -->
 
 If you are unable to view any of the documents above, please download the [paper](../_static/breiman2001/breiman2001.pdf), [presentation](../_static/breiman2001/Presentation.pdf), and [summary](../_static/breiman2001/Summary.pdf).
