@@ -1,4 +1,4 @@
-# journalClub-2024
+# Historical Papers in Statistical Methodology
 
 
 This repository is for Stats 319 Winter 2023/2024 . Mondays 1:30-2:50
