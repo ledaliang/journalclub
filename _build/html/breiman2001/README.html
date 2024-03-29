@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Breiman 1995 paper &#8212; Journal Club</title>
+    <title>Statistical Modeling: The Two Cultures &#8212; Journal Club</title>
   
   
   
@@ -147,7 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    journalClub-2024
+                    Historical Papers in Statistical Methodology
                 </a>
             </li>
         </ul>
@@ -155,7 +155,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../laird1982/README.html">Laird 1982 paper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../benjamini1995/README.html">Benjamini  1995  paper</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Breiman  1995 paper</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistical Modeling: The Two Cultures</a></li>
+
+
 
 <li class="toctree-l1"><a class="reference internal" href="../gelfand1990/README.html">Efron  1979 paper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../efron1979/README.html">Efron  1979 paper</a></li>
@@ -297,7 +299,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Breiman  1995 paper</h1>
+    <h1>Statistical Modeling: The Two Cultures</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -307,11 +309,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Breiman  1995 paper</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statistical Modeling: The Two Cultures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leo-breiman-1995">Leo Breiman 1995</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#original-paper">Original Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation">Presentation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
 
@@ -325,10 +332,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="breiman-1995-paper">
-<h1>Breiman  1995 paper<a class="headerlink" href="#breiman-1995-paper" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="statistical-modeling-the-two-cultures">
+<h1>Statistical Modeling: The Two Cultures<a class="headerlink" href="#statistical-modeling-the-two-cultures" title="Permalink to this heading">#</a></h1>
+<section id="leo-breiman-1995">
+<h2>Leo Breiman 1995<a class="headerlink" href="#leo-breiman-1995" title="Permalink to this heading">#</a></h2>
 <section id="two-cultures">
-<h2>Two cultures<a class="headerlink" href="#two-cultures" title="Permalink to this heading">#</a></h2>
+<h3>Two cultures<a class="headerlink" href="#two-cultures" title="Permalink to this heading">#</a></h3>
 <p>Leo Breiman’s paper on the two cultures refers to two main approaches within the field of statistics:</p>
 <ol class="arabic simple">
 <li><p><strong>Data Modeling Culture</strong>: This approach comes from more classical statistics and is based on generating models from data that provide insight into the underlying processes that have generated the data. Here, the focus is on understanding the relationship between variables and the reasons behind this relationship. The models are typically grounded in theory and are interpretable, meaning one can understand the role and significance of each variable.</p></li>
@@ -336,7 +345,7 @@ document.write(`
 </ol>
 </section>
 <section id="lessons-to-takeaway-from-this-paper">
-<h2>Lessons to takeaway from this paper<a class="headerlink" href="#lessons-to-takeaway-from-this-paper" title="Permalink to this heading">#</a></h2>
+<h3>Lessons to takeaway from this paper<a class="headerlink" href="#lessons-to-takeaway-from-this-paper" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Embrace computational and algorithmic thinking</strong>: If you are tasked with learning from data generated by a complicated model, you should search for the model that gives the best solution – either algorithmic or data model.</p></li>
 <li><p><strong>Being open to handling complexity</strong>: Using restrictive models can prevent statisticians from working on exciting new problems.Real-world data is becoming increasingly messy and complex. Be prepared tod eal with large datasets and complex models that may not fit into neat theoretical frameworks.</p></li>
@@ -345,14 +354,23 @@ document.write(`
 </ul>
 </section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="original-paper">
+<h1>Original Paper<a class="headerlink" href="#original-paper" title="Permalink to this heading">#</a></h1>
+<iframe src="../_static/breiman2001/breiman2001.pdf" width="700" height="500" allow="fullscreen"></iframe>
+<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/breiman2001.pdf). -->
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="presentation">
+<h1>Presentation<a class="headerlink" href="#presentation" title="Permalink to this heading">#</a></h1>
+<iframe src="../_static/breiman2001/Presentation.pdf" width="700" height="500" allow="fullscreen"></iframe>
+<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/Presentation.pdf). -->
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="summary">
 <h1>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h1>
-<iframe src="../_static/breiman2001.pdf" width="700" height="500" allow="fullscreen"></iframe>
-<!-- <embed src="breiman2001.pdf" type="application/pdf" width="600" height="400"></embed> -->
-<p>If you’re unable to view the document above, please <a class="reference download internal" download="" href="../_downloads/1775ddf870c90bf7dc3f16deb6836ee6/breiman2001.pdf"><span class="xref download myst">download the PDF</span></a> to view it.</p>
-<!-- https://ledaliang.github.io/breiman2001/breiman2001.pdf
-
-https://slinderman.github.io/stats305b/_downloads/4579c6dd01dedc652816fab983215728/practice.pdf --></section>
+<iframe src="../_static/breiman2001/Summary.pdf" width="700" height="500" allow="fullscreen"></iframe>
+<!-- If you're unable to view the document above, please [download the PDF](../_static/breiman2001/Summary.pdf). -->
+<p>If you are unable to view any of the documents above, please download the <a class="reference download internal" download="" href="../_downloads/6fdc51fbdf72bbf0d27578407291fd7f/breiman2001.pdf"><span class="xref download myst">paper</span></a>, <a class="reference download internal" download="" href="../_downloads/eab6e20a42105793a7a994cae1a59f24/Presentation.pdf"><span class="xref download myst">presentation</span></a>, and <a class="reference download internal" download="" href="../_downloads/bffd349dbe4fe74e557a3be6a7b1ed76/Summary.pdf"><span class="xref download myst">summary</span></a>.</p>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -421,11 +439,16 @@ https://slinderman.github.io/stats305b/_downloads/4579c6dd01dedc652816fab9832157
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Breiman  1995 paper</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statistical Modeling: The Two Cultures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leo-breiman-1995">Leo Breiman 1995</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-cultures">Two cultures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lessons-to-takeaway-from-this-paper">Lessons to takeaway from this paper</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#original-paper">Original Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation">Presentation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
 
