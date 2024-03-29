@@ -22,6 +22,13 @@ Leo Breiman's paper on the two cultures refers to two main approaches within the
 
 <!-- <img src="./breiman2001/breiman2001.pdf> -->
 <!-- <iframe src="/breiman2001/breiman2001.pdf" width="700" height="500" allow="fullscreen"></iframe> -->
-<embed src="breiman2001/breiman2001.pdf" type="application/pdf" width="600" height="400">
-    If you're unable to view the document above, please download the PDF to view it: <a href="/breiman2001/breiman2001.pdf">Download PDF</a>.
+<embed src="breiman2001.pdf" type="application/pdf" width="600" height="400">
 </embed>
+
+If you're unable to view the document above, please [download the PDF](breiman2001.pdf) to view it.
+
+
+
+<!-- https://ledaliang.github.io/breiman2001/breiman2001.pdf
+
+https://slinderman.github.io/stats305b/_downloads/4579c6dd01dedc652816fab983215728/practice.pdf -->
