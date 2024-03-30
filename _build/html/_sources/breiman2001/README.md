@@ -33,4 +33,4 @@ Leo Breiman's paper on the two cultures refers to two main approaches within the
 <iframe src="../_static/breiman2001/breiman2001.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 
 
-If you are unable to view any of the documents above, please download the [paper](../_static/breiman2001/breiman2001.pdf), [presentation](../_static/breiman2001/Presentation.pdf), and [summary](../_static/breiman2001/Summary.pdf).
+If you are unable to view any of the documents above, please download the [summary](../_static/breiman2001/Summary.pdf), [presentation](../_static/breiman2001/Presentation.pdf), and [paper](../_static/breiman2001/breiman2001.pdf).

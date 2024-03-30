@@ -4,10 +4,10 @@ root: index
 parts:
   - caption: Papers
     chapters:
-    - file: laird1982/README.md
-    - file: benjamini1995/README.md
-    - file: breiman2001/README.md
-    - file: gelfand1990/README.md
-    - file: efron1979/README.md
-    - file: dempster1977/README.md
-    - file: cox1972/README.md
+    - file: laird1982.md
+    - file: benjamini1995.md
+    - file: breiman2001.md
+    - file: gelfand1990.md
+    - file: efron1979.md
+    - file: dempster1977.md
+    - file: cox1972.md
