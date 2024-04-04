@@ -1,0 +1,35 @@
+name: Publish the book
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - winter2024
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the branch
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: Build the documentation with Sphinx
+        run: |
+          pip install -r requirements.txt
+          jupyter-book build .
+
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
