@@ -7,7 +7,7 @@ The main idea of the paper is to control the False Discovery Rate (FDR) rather t
 FWER controls the probability of making at least one false discovery, while FDR controls the expected proportion 
 of false discoveries among all the discoveries.
 
-### Key points
+### Key contributions
 
 * __Problem Statement__: In scientific research and data analysis, researchers often test multiple hypotheses simultaneously, which increases the risk of making false discoveries. The authors propose an alternative approach to controlling this type of error.
 
