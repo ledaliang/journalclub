@@ -1,0 +1,65 @@
+Hastie and Tibshirani (1986)
+
+This paper introduced the concept of Generalized Additive Models (GAMs) as an extension of traditional linear models in statistics. 
+
+Here's a summary of the key points from the paper:
+
+Motivation: The paper begins by highlighting the limitations of linear models for capturing complex relationships in data. Linear models assume that the relationship between 
+predictors and the response variable is linear, which may not be appropriate for all data sets. GAMs are introduced as a flexible and powerful alternative.
+
+Additive Models: GAMs are based on the idea of additive components. Instead of modeling the response variable as a linear combination of predictors, GAMs model 
+it as a sum of smooth functions of individual predictors. Each predictor has its own smooth component, allowing for non-linear relationships.
+
+Smoothing Functions: The paper discusses the use of smoothing functions, such as splines and kernel smoothers, to estimate the smooth components of each predictor. 
+These functions allow for non-linear and even non-monotonic relationships between predictors and the response.
+
+Parametric and Non-parametric Components: GAMs provide flexibility by allowing both parametric (linear) and non-parametric (smooth) components in the model.
+This means that some predictors can have linear relationships, while others can have more complex, non-linear relationships.
+
+Model Estimation: The authors describe methods for estimating the parameters of GAMs, including the use of penalized likelihood techniques to prevent overfitting. 
+They also discuss the concept of degrees of freedom in GAMs, which controls the complexity of the model.
+
+Inference and Hypothesis Testing: The paper discusses methods for making inferences and conducting hypothesis tests in the context of GAMs. 
+This includes the use of hypothesis tests for individual smooth components and overall model fit.
+
+Applications: The authors illustrate the use of GAMs with several real-world examples, including modeling the relationship between air pollution and mortality rates, 
+as well as predicting the probability of forest fires.
+
+Advantages: The paper highlights the advantages of GAMs, such as their ability to capture complex relationships, flexibility in handling different types of predictors, 
+and the ease of interpretation of the smooth components.
+
+In summary, the paper "Generalized Additive Models" introduced the concept of GAMs as a flexible and powerful extension of traditional linear models. 
+GAMs are particularly useful for modeling complex relationships in data by allowing for non-linear and non-parametric components. 
+This paper laid the foundation for the widespread use of GAMs in statistics and data analysis.
+
+
+Buja, Hastie and Tibshirani (1989)  (Not a good summary!!)
+
+
+The paper by Buja, Hastie, and Tibshirani discusses linear smoothers and additive models, which are statistical
+techniques used for modeling and analyzing data. The key points of the paper can be summarized as follows:
+
+Linear Smoothers: The paper explores linear smoothers, which are statistical methods used to capture underlying 
+trends or patterns in data. These smoothers aim to estimate the expected value of a response variable based on
+predictor variables while maintaining linearity in the model.
+
+Additive Models: Additive models are a specific type of statistical model discussed in the paper. These models 
+represent the relationship between a response variable and multiple predictor variables as a sum of smooth functions
+of individual predictors. Additive models are a flexible framework for modeling complex relationships in data.
+
+Nonparametric Estimation: The paper emphasizes the use of nonparametric techniques in the context of linear smoothers 
+and additive models. Nonparametric methods do not assume a specific functional form for the relationship between variables,
+making them suitable for modeling diverse data patterns.
+
+Estimation and Inference: The paper may cover topics related to estimation procedures and statistical inference for
+linear smoothers and additive models. This includes discussions on methods for estimating model parameters and making predictions.
+
+Applications: Linear smoothers and additive models have a wide range of applications in statistics, data analysis, 
+and machine learning. They can be used for tasks such as regression, classification, and data visualization.
+
+Statistical Theory: The paper likely delves into the theoretical foundations of linear smoothers and additive models,
+providing insights into the properties and assumptions underlying these techniques.
+
+Since I don't have access to the specific content of the paper, this summary is based on general knowledge of the topic 
+and the typical contents of research papers in statistics. If you have specific questions or need more detailed information, 
+please feel free to ask.

@@ -37,7 +37,9 @@ In summary, Bradley Efron's paper "Bootstrap Methods: Another Look at the Jackkn
 
 # Conversation with Brad Efron
 
-<iframe width="700" height="400" src="https://dl.dropboxusercontent.com/scl/fi/objfc2bysu4d3tre6694k/video1282018256.mp4?rlkey=9jgoymo32a3gwp4fjhf6debzx&dl=0" title="Dropbox video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe width="700" height="400" src="https://dl.dropboxusercontent.com/scl/fi/objfc2bysu4d3tre6694k/video1282018256.mp4?rlkey=9jgoymo32a3gwp4fjhf6debzx&dl=0" title="Dropbox video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0tA3x64nCGY?si=2o7Rbw7oI-UiUIPK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!-- # Summary
 
@@ -52,5 +54,5 @@ In summary, Bradley Efron's paper "Bootstrap Methods: Another Look at the Jackkn
 <iframe src="_static/efron1979/efron1979.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 
 
-If you are unable to view the interview, please watch it [here](https://dl.dropboxusercontent.com/scl/fi/objfc2bysu4d3tre6694k/video1282018256.mp4?rlkey=9jgoymo32a3gwp4fjhf6debzx&dl=0).
+If you are unable to view the interview, please watch it [here](https://youtu.be/0tA3x64nCGY?feature=shared).
 If you are unable to view any of the documents above, please download the [presentation](_static/efron1979/Stats319_Bootstrap.pdf) and [paper](_static/efron1979/efron1979.pdf).
