@@ -1,6 +1,6 @@
 # Overview
 
-Welcome to our repository compiled of seminal papers in the field of statistics. This website is the culmination of work by Stanford statistics PhD students in Rob Tibshirani's winter 2024 journal club. Each week we presented a different paper to our peers which led to thoughtful discussions and a concise written summary designed to facilitate a deeper understanding of complex concepts. 
+Welcome to our repository compiled of seminal papers in the field of statistics. This website is the culmination of work by Stanford statistics PhD students in Rob Tibshirani's Statistics 319 literature class. Each week we presented a different paper to our peers which led to thoughtful discussions and a concise written summary designed to facilitate a deeper understanding of complex concepts. 
 
 Our objective is to make this body of knowledge accessible to undergradate students in hopes of capturing their interest and convincing students to pursue a education and career in statistics.
 
