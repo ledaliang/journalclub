@@ -37,7 +37,7 @@ In summary, Bradley Efron's paper "Bootstrap Methods: Another Look at the Jackkn
 
 # Conversation with Brad Efron
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0tA3x64nCGY?si=2o7Rbw7oI-UiUIPK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0tA3x64nCGY?si=_TTXeOxxaLggXg9r" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!-- # Summary
 

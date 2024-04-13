@@ -29,7 +29,7 @@ In summary, Laird's 1982 paper "Random-Effects Models for Longitudinal Data" is 
 
 # Conversation with Nan Laird
 
-<iframe width="700" height="400" src="https://dl.dropboxusercontent.com/scl/fi/b2y1ahsmrvv4c970q0lkh/video2747929504.mp4?rlkey=ziw5z9wpgm5y17hxhze2c9vmj&dl=0" title="Dropbox video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ih3jHYgMl2U?si=r1_ADmOspDjaiJRY" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Summary
 
