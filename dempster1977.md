@@ -35,6 +35,10 @@ In summary, Dempster, Laird, and Rubin's paper introduced the Expectation-Maximi
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tboxy6k_ux4?si=KXFNlUbXPi6AzBQ2" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+# Conversation with Jack Ferguson about Baum-Welch
+
+<iframe src="_static/dempster1977/conversation.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+
 # Summary
 
 <iframe src="_static/dempster1977/Report.pdf" width="700" height="1000" allow="fullscreen"></iframe>
