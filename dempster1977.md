@@ -33,7 +33,7 @@ In summary, Dempster, Laird, and Rubin's paper introduced the Expectation-Maximi
 
 # Conversation with Art Dempster and Nan Laird
 
-<iframe width="700" height="400" src="https://dl.dropboxusercontent.com/scl/fi/sj0db8enyvvea7zfyt6cv/video4398578975.mp4?rlkey=t400tw0slzjqaeyxj9ausmsxs&dl=0" title="Dropbox video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tboxy6k_ux4?si=KXFNlUbXPi6AzBQ2" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Summary
 

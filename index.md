@@ -5,6 +5,8 @@ Welcome to our repository compiled of seminal papers in the field of statistics.
 Our objective is to make this body of knowledge accessible to undergradate students in hopes of capturing their interest and convincing students to pursue a education and career in statistics.
 
 
+
+
 | Author | Paper |
 | --- | --- |
 | Nan Laird | [Random-Effects Models for Logitudinal Data](laird1982.md) |
