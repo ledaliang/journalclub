@@ -11,3 +11,5 @@ parts:
     - file: efron1979.md
     - file: dempster1977.md
     - file: cox1972.md
+    - file: rosenbaum1983.md
+    - file: hastie1986.md
