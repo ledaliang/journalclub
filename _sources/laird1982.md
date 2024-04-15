@@ -1,4 +1,4 @@
-#  Random-Effects Models for Logitudinal Data
+#  Random-Effects Models for Longitudinal Data
 
 ## Nan Laird 1982
 
