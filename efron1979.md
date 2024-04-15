@@ -49,7 +49,7 @@ In summary, Bradley Efron's paper "Bootstrap Methods: Another Look at the Jackkn
 
 # 1979 Paper
 
-<iframe src="_static/efron1979/efron1979.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+<iframe src="_static/efron1979/Efron1979.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 
 
 If you are unable to view the interview, please watch it [here](https://youtu.be/0tA3x64nCGY?feature=shared).
