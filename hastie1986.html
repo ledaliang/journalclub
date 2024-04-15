@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generalized Additive Models &#8212; Historical Papers in Statistical Methodology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hastie1986';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The Central Role of the Propensity Score in Observational Studies for Causal Effects" href="rosenbaum1983.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Historical Papers in Statistical Methodology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Papers</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laird1982.html">Random-Effects Models for Longitudinal Data</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="benjamini1995.html">Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="breiman2001.html">Statistical Modeling: The Two Cultures</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="gelfand1990.html">Sampling-Based Approaches to Calculating Marginal Densities</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="efron1979.html">Bootstrap Methods: Another Look at the Jackknife</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="dempster1977.html">Maximum Likelihood from Incomplete Data via the EM Algorithm</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="cox1972.html">Regression Models and Life-Tables</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="rosenbaum1983.html">The Central Role of the Propensity Score in Observational Studies for Causal Effects</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Generalized Additive Models</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/hastie1986.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Generalized Additive Models</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Generalized Additive Models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trevor-hastie-and-robert-tibshirani-1986">Trevor Hastie and Robert Tibshirani 1986</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key points:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-smoothers-and-additive-models">Linear Smoothers and Additive Models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#andreas-buja-trevor-hastie-and-robert-tibshirani-1989">Andreas Buja, Trevor Hastie and Robert Tibshirani 1989</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-contributions">Key Contributions:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-trevor-hastie">Conversation with Trevor Hastie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">1986 Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1989 Paper</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="generalized-additive-models">
+<h1>Generalized Additive Models<a class="headerlink" href="#generalized-additive-models" title="Link to this heading">#</a></h1>
+<section id="trevor-hastie-and-robert-tibshirani-1986">
+<h2>Trevor Hastie and Robert Tibshirani 1986<a class="headerlink" href="#trevor-hastie-and-robert-tibshirani-1986" title="Link to this heading">#</a></h2>
+<p>The paper begins by highlighting the limitations of linear models for capturing complex relationships in data. Linear models assume that the relationship between
+predictors and the response variable is linear, which may not be appropriate for all data sets. GAMs are introduced as a flexible and powerful alternative.</p>
+<section id="key-points">
+<h3>Key points:<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Additive Models</strong>: GAMs are based on the idea of additive components. Instead of modeling the response variable as a linear combination of predictors, GAMs model it as a sum of smooth functions of individual predictors. Each predictor has its own smooth component, allowing for non-linear relationships.</p></li>
+<li><p><strong>Smoothing Functions</strong>: The paper discusses the use of smoothing functions, such as splines and kernel smoothers, to estimate the smooth components of each predictor. These functions allow for non-linear and even non-monotonic relationships between predictors and the response.</p></li>
+<li><p><strong>Parametric and Non-parametric Components</strong>: GAMs provide flexibility by allowing both parametric (linear) and non-parametric (smooth) components in the model. This means that some predictors can have linear relationships, while others can have more complex, non-linear relationships.</p></li>
+<li><p><strong>Model Estimation</strong>: The authors describe methods for estimating the parameters of GAMs, including the use of penalized likelihood techniques to prevent overfitting. They also discuss the concept of degrees of freedom in GAMs, which controls the complexity of the model.</p></li>
+<li><p><strong>Inference and Hypothesis Testing</strong>: The paper discusses methods for making inferences and conducting hypothesis tests in the context of GAMs. This includes the use of hypothesis tests for individual smooth components and overall model fit.</p></li>
+<li><p><strong>Applications</strong>: The authors illustrate the use of GAMs with several real-world examples, including modeling the relationship between air pollution and mortality rates, as well as predicting the probability of forest fires.</p></li>
+<li><p><strong>Advantages</strong>: The paper highlights the advantages of GAMs, such as their ability to capture complex relationships, flexibility in handling different types of predictors, and the ease of interpretation of the smooth components.</p></li>
+</ul>
+<p>In summary, the paper “Generalized Additive Models” introduced the concept of GAMs as a flexible and powerful extension of traditional linear models.
+GAMs are particularly useful for modeling complex relationships in data by allowing for non-linear and non-parametric components.
+This paper laid the foundation for the widespread use of GAMs in statistics and data analysis.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="linear-smoothers-and-additive-models">
+<h1>Linear Smoothers and Additive Models<a class="headerlink" href="#linear-smoothers-and-additive-models" title="Link to this heading">#</a></h1>
+<section id="andreas-buja-trevor-hastie-and-robert-tibshirani-1989">
+<h2>Andreas Buja, Trevor Hastie and Robert Tibshirani 1989<a class="headerlink" href="#andreas-buja-trevor-hastie-and-robert-tibshirani-1989" title="Link to this heading">#</a></h2>
+<p>This paper contributes to the understanding of linear smoothers and their role in additive models, offering a comprehensive framework for analyzing a wide array of smoothing methods used in statistics for data analysis. The paper addresses the concept of linear smoothers, which are tools used for estimating regression functions without assuming a specific parametric form for the relationship between the dependent and independent variables. These smoothers are essential in exploratory data analysis and in building flexible statistical models. The authors aim to unify the understanding of linear smoothers and demonstrate how they are related to additive models.</p>
+<section id="key-contributions">
+<h3>Key Contributions:<a class="headerlink" href="#key-contributions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Unified Framework</strong>: The authors present a unified framework for analyzing linear smoothers, which includes a wide variety of methods such as running means, kernel smoothers, and spline smoothers. This framework allows for a better understanding of the properties and behaviors of different smoothing techniques.</p></li>
+<li><p><strong>Analysis of Smoothing Parameters</strong>: The paper discusses the role of smoothing parameters, which control the trade-off between the smoothness of the estimate and its fidelity to the data. The authors provide insights into how these parameters affect the bias and variance of the estimates and discuss methods for their optimal selection.</p></li>
+<li><p><strong>Introduction to Generalized Additive Models (GAMs)</strong>: One of the significant contributions of the paper is the introduction and development of Generalized Additive Models (GAMs). GAMs extend linear models by allowing the linear predictor to be a sum of smooth functions of the covariates. This extension provides a powerful tool for modeling complex relationships in a flexible and interpretable manner.</p></li>
+<li><p><strong>Computational Techniques</strong>: The paper discusses computational techniques for fitting linear smoothers and additive models, highlighting the use of backfitting algorithms. These techniques are crucial for the practical application of these models to real data sets.</p></li>
+<li><p><strong>Empirical Comparisons and Examples</strong>: The authors provide empirical comparisons of various smoothers, demonstrating their strengths and weaknesses in different scenarios. They also illustrate the application of linear smoothers and additive models with examples, showing how these methods can uncover complex patterns in data.</p></li>
+</ul>
+<p>“Linear Smoothers and Additive Models” has had a profound impact on the field of statistics and data analysis. By providing a comprehensive and unified view of linear smoothers, the paper has facilitated a deeper understanding of non-parametric regression techniques. Furthermore, the introduction and development of Generalized Additive Models have opened new avenues for statistical modeling, allowing researchers and practitioners to model complex relationships in a flexible yet interpretable way.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conversation-with-trevor-hastie">
+<h1>Conversation with Trevor Hastie<a class="headerlink" href="#conversation-with-trevor-hastie" title="Link to this heading">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1MmBVtp2y5U?si=2lXI9m5sZW4G556s" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="paper">
+<h1>1986 Paper<a class="headerlink" href="#paper" title="Link to this heading">#</a></h1>
+<iframe src="_static/hastie1986/hastie.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>1989 Paper<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<iframe src="_static/hastie1986/buja.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+<p>If you are unable to view the interview, please watch it <a class="reference external" href="https://youtu.be/1MmBVtp2y5U?feature=shared">here</a>.
+If you are unable to view any of the documents above, please download the <a class="reference download internal" download="" href="_downloads/ea5d27b6d15d15e9e0f1f42e340d6900/hastie.pdf"><span class="xref download myst">Hastie and Tibshirani paper</span></a> and the <a class="reference download internal" download="" href="_downloads/eda4b33bff3794a9deda50839aaaf878/buja.pdf"><span class="xref download myst">Buja, Hastie and Tibshirani paper</span></a>.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rosenbaum1983.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Central Role of the Propensity Score in Observational Studies for Causal Effects</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Generalized Additive Models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trevor-hastie-and-robert-tibshirani-1986">Trevor Hastie and Robert Tibshirani 1986</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key points:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-smoothers-and-additive-models">Linear Smoothers and Additive Models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#andreas-buja-trevor-hastie-and-robert-tibshirani-1989">Andreas Buja, Trevor Hastie and Robert Tibshirani 1989</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-contributions">Key Contributions:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-trevor-hastie">Conversation with Trevor Hastie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">1986 Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1989 Paper</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leda Liang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
