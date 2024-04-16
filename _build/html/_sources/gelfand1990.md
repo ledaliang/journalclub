@@ -31,7 +31,7 @@ in advancing computational Bayesian methods.
 
 # Conversation with Adrian Smith
 
-<iframe width="700" height="400" src="https://dl.dropboxusercontent.com/scl/fi/8ra3b4fdx69gxtz9serqs/video1241636181.mp4?rlkey=9kkkmzximoi41ey2dhg79eq1l&dl=0" title="Dropbox video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZpFqaPHRCps?si=vUnbqIR9fCK_oOi8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!-- # Summary
 
