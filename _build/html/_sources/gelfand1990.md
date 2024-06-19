@@ -1,5 +1,5 @@
 #  Sampling-Based Approaches to Calculating Marginal Densities
-## Alan Gelfand and Adrian Smith 1990
+## Alan Gelfand and Sir Adrian Smith 1990
 
 The paper focuses on addressing the problem of calculating marginal densities in Bayesian statistical analysis.
 
@@ -29,7 +29,7 @@ paving the way for a wide range of applications in Bayesian modeling and inferen
 This paper has had a lasting impact on the field of statistics and has been instrumental 
 in advancing computational Bayesian methods.
 
-# Conversation with Adrian Smith
+# Conversation with Sir Adrian Smith
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZpFqaPHRCps?si=vUnbqIR9fCK_oOi8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

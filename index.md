@@ -18,5 +18,7 @@ Our objective is to make this body of knowledge accessible to undergradate stude
 | Sir David Cox | [Regression Models and Life-Tables](cox1972.md) |
 | Paul Rosenbaum and Donald Rubin\* | [The Central Role of the Propensity Score in Observational Studies for Causal Effects](rosenbaum1983.md) |
 | Trevor Hastie and Robert Tibshirani\* | [Generalized Additive Models](hastie1986.md) |
+| Vladimir Vovk\* | [A Tutorial on Conformal Prediction](vovk.md) |
+| Jerry Friedman\* | [Greedy Function Approximation: A Gradient Boosting Machine](friedman.md) |
 
 \* There are no slides or summary available for these papers because we did not get a chance to cover them in class.
