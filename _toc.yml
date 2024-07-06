@@ -15,3 +15,4 @@ parts:
     - file: hastie1986.md
     - file: vovk.md
     - file: friedman.md
+    - file: robins.md
