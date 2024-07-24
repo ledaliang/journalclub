@@ -16,3 +16,4 @@ parts:
     - file: vovk.md
     - file: friedman.md
     - file: robins.md
+    - file: tibshirani.md
