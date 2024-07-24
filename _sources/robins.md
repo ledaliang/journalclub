@@ -1,5 +1,5 @@
 #  Association, Causation, and Marginal Structural Models
-## James Robisn 1999
+## James Robins 1999
 
 The paper by James Robins addresses the important concepts of association and causation in epidemiology and public health research. It introduces Marginal Structural Models (MSMs) as a new method for estimating causal effects in complex longitudinal studies where traditional methods may fail.
 

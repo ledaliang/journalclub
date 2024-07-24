@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Statistical Ideas that Changed the World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Regression Shrinkage and Selection via the Lasso &#8212; Statistical Ideas that Changed the World</title>
   
   
   
@@ -57,9 +58,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tibshirani';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Association, Causation, and Marginal Structural Models" href="robins.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +126,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -174,7 +176,7 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Papers</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="laird1982.html">Random-Effects Models for Longitudinal Data</a></li>
 
 
@@ -224,7 +226,7 @@
 <li class="toctree-l1"><a class="reference internal" href="robins.html">Association, Causation, and Marginal Structural Models</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="tibshirani.html">Regression Shrinkage and Selection via the Lasso</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regression Shrinkage and Selection via the Lasso</a></li>
 
 
 </ul>
@@ -271,6 +273,54 @@
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tibshirani.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -304,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -315,11 +367,30 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Regression Shrinkage and Selection via the Lasso</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Regression Shrinkage and Selection via the Lasso</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rob-tibshirani-1996">Rob Tibshirani 1996</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lasso">The Lasso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-the-lasso">Benefits of the Lasso</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-rob-tibshirani">Conversation with Rob Tibshirani</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">1995 Paper</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -329,13 +400,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="regression-shrinkage-and-selection-via-the-lasso">
+<h1>Regression Shrinkage and Selection via the Lasso<a class="headerlink" href="#regression-shrinkage-and-selection-via-the-lasso" title="Link to this heading">#</a></h1>
+<section id="rob-tibshirani-1996">
+<h2>Rob Tibshirani 1996<a class="headerlink" href="#rob-tibshirani-1996" title="Link to this heading">#</a></h2>
+<p>Robert Tibshirani’s 1995 paper introduces a new method for regression called the Lasso. The Lasso is designed to improve the prediction accuracy and interpretability of statistical models by imposing a constraint that results in simpler models.</p>
+<section id="key-concepts">
+<h3>Key Concepts<a class="headerlink" href="#key-concepts" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Linear Regression</strong>: This is a basic statistical method used to model the relationship between a dependent variable and one or more independent variables.</p></li>
+<li><p><strong>Overfitting</strong>: This occurs when a model is too complex and captures the noise in the data rather than the underlying pattern. Overfitted models perform well on training data but poorly on new, unseen data.</p></li>
+<li><p><strong>Shrinkage Methods</strong>: These are techniques used to address overfitting by introducing a penalty that shrinks the regression coefficients towards zero. Ridge regression is an example, where the penalty is the sum of the squared coefficients.</p></li>
+</ul>
+</section>
+<section id="the-lasso">
+<h3>The Lasso<a class="headerlink" href="#the-lasso" title="Link to this heading">#</a></h3>
+<p>The Lasso modifies the linear regression by adding a penalty equal to the sum of the absolute values of the coefficients. Mathematically, it solves the following optimization problem:</p>
+<div class="math notranslate nohighlight">
+\[\min_{\beta} \left( \sum_{i=1}^{n} (y_i - \sum_{j=1}^{p} x_{ij} \beta_j)^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right)\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> represents the regression coefficients.</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span> is the observed value.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{ij}\)</span> are the predictor variables.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> is a parameter that controls the amount of shrinkage. Larger values of \lambda result in more coefficients being shrunk to zero.</p></li>
+</ul>
+</section>
+<section id="benefits-of-the-lasso">
+<h3>Benefits of the Lasso<a class="headerlink" href="#benefits-of-the-lasso" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Variable Selection</strong>: Unlike ridge regression, the Lasso can set some coefficients exactly to zero, effectively selecting a simpler model with fewer predictors.</p></li>
+<li><p><strong>Interpretability</strong>: By producing simpler models with fewer predictors, the Lasso makes it easier to understand the relationship between the variables.</p></li>
+<li><p><strong>Prediction Accuracy</strong>: The Lasso can improve the accuracy of predictions on new data by reducing overfitting.</p></li>
+<li><p>The Lasso is particularly useful when dealing with datasets that have a large number of predictors.</p></li>
+<li><p>It is a powerful tool for both improving prediction performance and simplifying models, making it easier to communicate results to non-experts.</p></li>
+</ul>
+<p>Tibshirani’s introduction of the Lasso provides a valuable addition to the set of tools available for regression analysis. By combining the benefits of variable selection and shrinkage, the Lasso helps statisticians build models that are both accurate and interpretable.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conversation-with-rob-tibshirani">
+<h1>Conversation with Rob Tibshirani<a class="headerlink" href="#conversation-with-rob-tibshirani" title="Link to this heading">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3rvl4KV41JE?si=XbiLFlrfJinuL9Ac" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="paper">
+<h1>1995 Paper<a class="headerlink" href="#paper" title="Link to this heading">#</a></h1>
+<iframe src="_static/tibshirani/tibshirani.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+<p>If you are unable to view the interview, please watch it <a class="reference external" href="https://youtu.be/3rvl4KV41JE?si=QWOisWN4zDk9HqPj">here</a>.
+If you are unable to view any of the documents above, please download the <a class="reference download internal" download="" href="_downloads/4b9e567f1c10f03bd613701cef03ff8d/tibshirani.pdf"><span class="xref download myst">paper</span></a>.</p>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -347,12 +479,47 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="robins.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Association, Causation, and Marginal Structural Models</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Regression Shrinkage and Selection via the Lasso</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rob-tibshirani-1996">Rob Tibshirani 1996</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lasso">The Lasso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-the-lasso">Benefits of the Lasso</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-rob-tibshirani">Conversation with Rob Tibshirani</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">1995 Paper</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
