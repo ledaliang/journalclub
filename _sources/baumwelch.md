@@ -9,4 +9,4 @@ The Baum-Welch algorithm is often cited from their paper titled “A Maximizatio
 
 # Conversation with Jack Ferguson about Baum-Welch
 
-<iframe src="_static/ferguson/conversation.pdf" width="700" height="1000" allow="fullscreen"></iframe>
+<iframe src="_static/baumwelch/conversation.pdf" width="700" height="1000" allow="fullscreen"></iframe>
