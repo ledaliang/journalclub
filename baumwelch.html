@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Random-Effects Models for Longitudinal Data &#8212; Statistical Ideas that Changed the World</title>
+    <title>The Baum-Welch Algorithm &#8212; Statistical Ideas that Changed the World</title>
   
   
   
@@ -61,11 +61,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'laird1982';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'baumwelch';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing" href="benjamini1995.html" />
-    <link rel="prev" title="Overview" href="index.html" />
+    <link rel="next" title="Regression Models and Life-Tables" href="cox1972.html" />
+    <link rel="prev" title="Maximum Likelihood from Incomplete Data via the EM Algorithm" href="dempster1977.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,7 +165,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Papers</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Random-Effects Models for Longitudinal Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laird1982.html">Random-Effects Models for Longitudinal Data</a></li>
 
 
 
@@ -192,7 +192,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="baumwelch.html">The Baum-Welch Algorithm</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Baum-Welch Algorithm</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="cox1972.html">Regression Models and Life-Tables</a></li>
 
@@ -272,7 +272,7 @@
       
       
       
-      <li><a href="_sources/laird1982.md" target="_blank"
+      <li><a href="_sources/baumwelch.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Random-Effects Models for Longitudinal Data</h1>
+    <h1>The Baum-Welch Algorithm</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,17 +358,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Random-Effects Models for Longitudinal Data</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-laird-1982">Nan Laird 1982</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-contributions">Key Contributions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">The Baum-Welch Algorithm</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leonard-baum-adn-lloyd-welch">Leonard Baum adn Lloyd Welch</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-nan-laird">Conversation with Nan Laird</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation">Presentation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-jack-ferguson-about-baum-welch">Conversation with Jack Ferguson about Baum-Welch</a></li>
 </ul>
 
             </nav>
@@ -381,48 +375,18 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="random-effects-models-for-longitudinal-data">
-<h1>Random-Effects Models for Longitudinal Data<a class="headerlink" href="#random-effects-models-for-longitudinal-data" title="Link to this heading">#</a></h1>
-<section id="nan-laird-1982">
-<h2>Nan Laird 1982<a class="headerlink" href="#nan-laird-1982" title="Link to this heading">#</a></h2>
-<p>The paper addresses the statistical modeling of longitudinal data, which involves repeated measurements on the same subjects over time.
-The primary objective is to develop and present a framework for analyzing such data using random-effects models.</p>
-<section id="key-contributions">
-<h3>Key Contributions<a class="headerlink" href="#key-contributions" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Introduction of Random-Effects Models</strong>: Laird’s paper introduces the concept of random-effects models for longitudinal data. These models account for the correlation between repeated measurements within the same subject and allow for the incorporation of both fixed and random effects.</p></li>
-<li><p><strong>Hierarchical Structure</strong>: The paper discusses the hierarchical structure of the random-effects model, where individual subject-specific effects are considered as random variables following a certain distribution. This structure captures the underlying variability among subjects.</p></li>
-<li><p><strong>Likelihood-Based Estimation</strong>: Laird presents likelihood-based methods for estimating the model parameters, including the variance components of the random effects. Maximum likelihood estimation plays a central role in this approach.</p></li>
-<li><p><strong>Comparison with Other Models</strong>: The paper compares random-effects models with alternative approaches, such as pooled cross-sectional models and fixed-effects models. It highlights the advantages of random-effects models in capturing subject-specific variability.</p></li>
-<li><p><strong>Application Examples</strong>: The paper provides practical examples of the application of random-effects models to real longitudinal data, demonstrating theirflexibility and usefulness in various fields, including medicine and social sciences.</p></li>
-<li><p><strong>Discussion of Assumptions</strong>:
-Laird discusses the assumptions underlying random-effects models, such as the distributional assumptions for random effects
-and the choice of correlation structure. This discussion helps researchers make informed modeling decisions.</p></li>
-<li><p><strong>Statistical Software</strong>:
-The paper mentions the availability of statistical software for fitting random-effects models, which has since become widely
-used in longitudinal data analysis.</p></li>
-</ul>
-<p>In summary, Laird’s 1982 paper “Random-Effects Models for Longitudinal Data” is a foundational work in the field of longitudinal data analysis. It introduces the concept of random-effects models and provides a comprehensive framework for modeling and analyzing repeated measurements over time.The paper’s contributions have had a lasting impact on statistical methodology and have been widely applied in various fields to address the challenges posed by longitudinal data.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-baum-welch-algorithm">
+<h1>The Baum-Welch Algorithm<a class="headerlink" href="#the-baum-welch-algorithm" title="Link to this heading">#</a></h1>
+<section id="leonard-baum-adn-lloyd-welch">
+<h2>Leonard Baum adn Lloyd Welch<a class="headerlink" href="#leonard-baum-adn-lloyd-welch" title="Link to this heading">#</a></h2>
+<p>The Baum-Welch algorithm was developed by Leonard E. Baum and Lloyd R. Welch in the late 1960s and early 1970s. Leonard Baum, a mathematician, and Lloyd Welch, a statistician, both worked at the Institute for Defense Analyses (IDA) at Princeton, New Jersey. Their work contributed significantly to the theory of Hidden Markov Models (HMMs), particularly in developing this expectation-maximization algorithm to estimate the unknown parameters of HMMs.</p>
+<p>Their work, specifically on this algorithm, was part of a broader set of contributions in the study of probabilistic models and statistical inference, particularly in applications related to communication systems, speech recognition, and signal processing.</p>
+<p>The Baum-Welch algorithm is often cited from their paper titled “A Maximization Technique Occurring in the Statistical Analysis of Probabilistic Functions of Markov Chains” (1970), which laid the foundation for this widely used approach in machine learning and statistical modeling.</p>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="conversation-with-nan-laird">
-<h1>Conversation with Nan Laird<a class="headerlink" href="#conversation-with-nan-laird" title="Link to this heading">#</a></h1>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ih3jHYgMl2U?si=r1_ADmOspDjaiJRY" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
-<iframe src="_static/laird1982/Laird1982-Writeup.pdf" width="700" height="1000" allow="fullscreen"></iframe>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="presentation">
-<h1>Presentation<a class="headerlink" href="#presentation" title="Link to this heading">#</a></h1>
-<iframe src="_static/laird1982/Slides.pdf" width="700" height="600" allow="fullscreen"></iframe>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="paper">
-<h1>Paper<a class="headerlink" href="#paper" title="Link to this heading">#</a></h1>
-<iframe src="_static/laird1982/laird1982.pdf" width="700" height="1000" allow="fullscreen"></iframe>
-<p>If you are unable to view the interview, please watch it <a class="reference external" href="https://dl.dropboxusercontent.com/scl/fi/b2y1ahsmrvv4c970q0lkh/video2747929504.mp4?rlkey=ziw5z9wpgm5y17hxhze2c9vmj&amp;amp;dl=0">here</a>.
-If you are unable to view any of the documents above, please download the <a class="reference download internal" download="" href="_downloads/a6110882743397d90a8f04bb4c9638cc/Laird1982-Writeup.pdf"><span class="xref download myst">summary</span></a>, <a class="reference download internal" download="" href="_downloads/34d7d580ffc4155e4606e66df1ac4a8c/Slides.pdf"><span class="xref download myst">presentation</span></a>, and <a class="reference download internal" download="" href="_downloads/6e52a399a02eae9fa4b5ebee9851e47f/laird1982.pdf"><span class="xref download myst">paper</span></a>.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="conversation-with-jack-ferguson-about-baum-welch">
+<h1>Conversation with Jack Ferguson about Baum-Welch<a class="headerlink" href="#conversation-with-jack-ferguson-about-baum-welch" title="Link to this heading">#</a></h1>
+<iframe src="_static/ferguson/conversation.pdf" width="700" height="1000" allow="fullscreen"></iframe>
 </section>
 
     <script type="text/x-thebe-config">
@@ -456,20 +420,20 @@ If you are unable to view any of the documents above, please download the <a cla
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="dempster1977.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">Maximum Likelihood from Incomplete Data via the EM Algorithm</p>
       </div>
     </a>
     <a class="right-next"
-       href="benjamini1995.html"
+       href="cox1972.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</p>
+        <p class="prev-next-title">Regression Models and Life-Tables</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -490,17 +454,11 @@ If you are unable to view any of the documents above, please download the <a cla
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Random-Effects Models for Longitudinal Data</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-laird-1982">Nan Laird 1982</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-contributions">Key Contributions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">The Baum-Welch Algorithm</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leonard-baum-adn-lloyd-welch">Leonard Baum adn Lloyd Welch</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-nan-laird">Conversation with Nan Laird</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation">Presentation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#paper">Paper</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversation-with-jack-ferguson-about-baum-welch">Conversation with Jack Ferguson about Baum-Welch</a></li>
 </ul>
 
   </nav></div>
